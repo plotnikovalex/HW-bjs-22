@@ -23,11 +23,11 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     let con = parseInt(contribution); 	  //начальный взнос	
     let am = parseInt(amount);  			  //общая стоимость	
   	if (isNaN(per) || per < 0) {
-   		return `Параметр "Процентная ставка" содержит неправильное значение ${percent}`;
+   		return `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`;
    	} else if (isNaN(con) || con < 0) {
-   		return `Параметр "Начальный взнос" содержит неправильное значение ${contribution}`;
+   		return `Параметр "Начальный взнос" содержит неправильное значение "${contribution}"`;
    	} else if (isNaN(am) || am < 0) {
-   		return `Параметр "Общая стоимость" содержит неправильное значение ${amount}`;
+   		return `Параметр "Общая стоимость" содержит неправильное значение "${amount}"`;
    	} else {
 			
   		let today = new Date();
@@ -46,5 +46,5 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   // код для задачи №2 писать здесь
 
 
-  //return +totalAmount;
+  return +totalAmount;
 }
